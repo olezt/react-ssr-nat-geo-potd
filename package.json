@@ -1,13 +1,16 @@
 {
   "name": "react-ssr-nat-geo-potd",
+  "homepage": "https://olezt.github.io/react-ssr-nat-geo-potd",
   "version": "1.0.0",
   "description": "NatGeo photo of the day",
   "main": "index.js",
   "scripts": {
     "dev": "npm-run-all --parallel dev:*",
-    "dev:server": "nodemon --watch build --exec node dist/bundle.js",
+    "dev:server": "nodemon --watch dist --exec node dist/bundle.js",
     "dev:build-server": "webpack --config webpack.server.js --watch",
-    "dev:build-client": "webpack --config webpack.client.js --watch"
+    "dev:build-client": "webpack --config webpack.client.js --watch",
+    "predeploy": "npm run dev",
+    "deploy": "gh-pages -d dev"
   },
   "dependencies": {
     "axios": "0.16.2",
@@ -42,5 +45,8 @@
     "webpack-node-externals": "1.6.0",
     "react-dates": "21.8.0",
     "moment": "2.24.0"
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
