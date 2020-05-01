@@ -1,5 +1,5 @@
 # react-ssr-nat-geo-potd
-National geographic photo of the day using React SSR... https://olezt.github.io/ng-is-it-friday-yet
+National geographic photo of the day using React SSR...
 
 This project serves also as a simple working example combining <b>React, SSR (Server Side Rendering) and Webpack</b>.
 
