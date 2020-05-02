@@ -9,6 +9,7 @@ import Routes  from './client/Routes';
 import {API_ROOT} from "./constants";
 
 const app = express();
+app.set('port', (process.env.PORT || 3000));
 
 //proxy set up
 app.use('/api', proxy(API_ROOT));
@@ -30,6 +31,6 @@ app.get('*', (req, res) => {
     });
 });
 
-app.listen(3000, ()=>{
-    console.log('Listening to port 3000');
+app.listen(app.get('port'), ()=>{
+    console.log('Listening to port', app.get('port'));
 });
