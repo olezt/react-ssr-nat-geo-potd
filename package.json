@@ -2,6 +2,9 @@
   "name": "react-ssr-nat-geo-potd",
   "homepage": "https://olezt.github.io/react-ssr-nat-geo-potd",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.12.0"
+  },
   "description": "NatGeo photo of the day",
   "main": "index.js",
   "scripts": {
